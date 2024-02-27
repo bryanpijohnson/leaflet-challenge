@@ -35,7 +35,6 @@ function depColor(item){
 // URL for the API call
 let url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
 
-let depth = []
 d3.json(url).then(function(data){
     let earthquakes = data.features;
     earthquakes.forEach(element => {
@@ -43,7 +42,6 @@ d3.json(url).then(function(data){
         let lon = element.geometry.coordinates[0];
         let dep = element.geometry.coordinates[2];
         let mag = element.properties.mag;
-        depth.push(dep);
         L.circle([lat, lon], {
             color: "black",
             weight: 1,
@@ -55,16 +53,9 @@ d3.json(url).then(function(data){
             .addTo(myMap);
 
     });
-    // L.control.Legend({
-    //     position: "bottomright",
-    //     legends: [{
-    //         label: "Text",
-    //         type: "rectange",
-    //         fillColor: "rgb(182,244,76)"
-    //     }]
-    // }).addTo(myMap);
     L.control.Legend({
-        position: "bottomleft",
+        position: "bottomright",
+        title: " ",
         collapsed: false,
         symbolWidth: 24,
         opacity: 1,
@@ -74,42 +65,42 @@ d3.json(url).then(function(data){
             sides: 4,
             color: "#B6F44C",
             fillColor: "#B6F44C",
-            weight: 5
+            weight: 40
         }, {
             label: "10-30",
             type: "polygon",
             sides: 4,
             color: "#E1F34F",
             fillColor: "#E1F34F",
-            weight: 5
+            weight: 40
         }, {
             label: "30-50",
             type: "polygon",
             sides: 4,
             color: "#F2DC4C",
             fillColor: "#F2DC4C",
-            weight: 5
+            weight: 40
         }, {
             label: "50-70",
             type: "polygon",
             sides: 4,
             color: "#F3BA4C",
             fillColor: "#F3BA4C",
-            weight: 5
+            weight: 40
         }, {
             label: "70-90",
             type: "polygon",
             sides: 4,
             color: "#EFA76A",
             fillColor: "#EFA76A",
-            weight: 5
+            weight: 40
         }, {
             label: "90+",
             type: "polygon",
             sides: 4,
             color: "#ED6A6A",
             fillColor: "#ED6A6A",
-            weight: 5
+            weight: 40
         }]
     }).addTo(myMap);
 });

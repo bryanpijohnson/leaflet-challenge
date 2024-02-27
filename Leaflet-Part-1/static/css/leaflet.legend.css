@@ -2,20 +2,20 @@
     background-color: white;
   }
   
-  .leaflet-legend-title {
-    margin: 3px;
+  /* .leaflet-legend-title {
+    margin: 2px;
     padding-bottom: 5px;
   }
   
   .leaflet-legend-column {
     float: left;
-    margin-left: 10px;
-  }
+    margin-left: 8px;
+  } */
   
   
   .leaflet-legend-item {
     display: table;
-    margin: 2px 0;
+    margin: 0;
   }
   
   .leaflet-legend-item span {
