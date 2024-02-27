@@ -69,39 +69,47 @@ d3.json(url).then(function(data){
         symbolWidth: 24,
         opacity: 1,
         legends: [{
-            label: "\-10-10",
+            label: "-10-10",
             type: "polygon",
             sides: 4,
-            color: "#0000FF",
-            fillColor: "#0000FF",
+            color: "#B6F44C",
+            fillColor: "#B6F44C",
             weight: 5
         }, {
-            label: "Rectangle",
-            type: "rectangle",
-            color: "#FF0000",
-            fillColor: "#FF0000",
-            weight: 2
-        }, {
-            label: "Square",
+            label: "10-30",
             type: "polygon",
             sides: 4,
-            color: "#FF0000",
-            fillColor: "#FF0000",
-            weight: 2
+            color: "#E1F34F",
+            fillColor: "#E1F34F",
+            weight: 5
         }, {
-            label: "Regular triangle",
+            label: "30-50",
             type: "polygon",
-            sides: 3,
-            color: "#FF0000",
-            fillColor: "#FF0000",
-            weight: 2
+            sides: 4,
+            color: "#F2DC4C",
+            fillColor: "#F2DC4C",
+            weight: 5
         }, {
-            label: "Regular polygon",
+            label: "50-70",
             type: "polygon",
-            sides: 5,
-            color: "#FF0000",
-            fillColor: "#FF0000",
-            weight: 2
+            sides: 4,
+            color: "#F3BA4C",
+            fillColor: "#F3BA4C",
+            weight: 5
+        }, {
+            label: "70-90",
+            type: "polygon",
+            sides: 4,
+            color: "#EFA76A",
+            fillColor: "#EFA76A",
+            weight: 5
+        }, {
+            label: "90+",
+            type: "polygon",
+            sides: 4,
+            color: "#ED6A6A",
+            fillColor: "#ED6A6A",
+            weight: 5
         }]
     }).addTo(myMap);
 });
